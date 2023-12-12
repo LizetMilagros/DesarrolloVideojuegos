@@ -1,6 +1,54 @@
 using UnityEngine;
 
-public class FollowWP : MonoBehaviour {
+public class FollowWP : MonoBehaviour
+{
+    float speed = 5.0f;
+    public Transform target;
+
+    void Start()
+    {
+        // Inicialmente, apunta a la posición del primer waypoint
+        transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
+    }
+
+    void Update()
+    {
+        // Mueve hacia adelante
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+        // Calcula la distancia hasta el siguiente waypoint
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+        // Si está lo suficientemente cerca del waypoint, cambia al siguiente
+        if (distanceToTarget < 0.2f)
+        {
+            // Obtén el siguiente waypoint desde el componente WP
+            SetNextWaypoint();
+        }
+    }
+
+    void SetNextWaypoint()
+    {
+        // Encuentra el siguiente waypoint usando el componente WP
+        WP waypointComponent = target.GetComponent<WP>();
+
+        if (waypointComponent != null)
+        {
+            target = waypointComponent.nexPoint;
+            // Ajusta la rotación para mirar hacia el nuevo objetivo
+            transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
+        }
+        else
+        {
+            Debug.LogError("El objeto actual no tiene el componente WP.");
+        }
+    }
+}
+
+//using UnityEngine;
+
+
+/*public class FollowWP : MonoBehaviour {
     // Array of way points
     public GameObject[] waypoints;
     // waypoint index
@@ -92,4 +140,4 @@ public class FollowWP : MonoBehaviour {
             }
         }
     }
-}
+}*/

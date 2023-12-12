@@ -7,6 +7,8 @@ TagManager:
   - Suelo
   - Enemy
   - cambioEscena
+  - WayPoints
+  - WayPoint
   layers:
   - Default
   - TransparentFX
