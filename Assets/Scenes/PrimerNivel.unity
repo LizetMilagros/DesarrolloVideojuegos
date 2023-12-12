@@ -33969,7 +33969,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265032052}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 128c9775a74906b4f9fdc93b28bbd295, type: 3}
   m_Name: 
@@ -34006,6 +34006,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: -10
+--- !u!143 &1265032061
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265032052}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.5
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1265032062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265032052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dcdf9af07d25f44accefeadbc2d24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalMove: 0
+  verticalMove: 0
+  player: {fileID: 0}
+  playerspeed: 7
+  gravity: 20
+  fallVelocity: 0
+  jumpForce: 10
+  mainCamera: {fileID: 963194227}
 --- !u!4 &1265405105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5114996075067899094, guid: 3d3e1647da524af438765070d6d4fc6c, type: 3}
@@ -45064,6 +45110,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e02b3ab4f5cae94bb034af96ef14fa5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1265032060}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e02b3ab4f5cae94bb034af96ef14fa5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1265032062}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e02b3ab4f5cae94bb034af96ef14fa5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1265032061}
   m_SourcePrefab: {fileID: 100100000, guid: 0e02b3ab4f5cae94bb034af96ef14fa5, type: 3}
 --- !u!4 &1664040967 stripped
 Transform:
