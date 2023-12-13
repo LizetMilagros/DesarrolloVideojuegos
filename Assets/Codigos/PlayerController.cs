@@ -18,8 +18,10 @@ public class PlayerController : MonoBehaviour
 
     public bool isAirborne = false; // Add this line inside the PlayerController class declaration
 
+    private Animator anim;
     
     void Start(){
+        anim = GetComponent<Animator>();
         player = GetComponent<CharacterController>();
     }
 
@@ -41,6 +43,8 @@ public class PlayerController : MonoBehaviour
         PlayerSkills();
 
         player.Move(movePlayer * Time.deltaTime);
+        anim.SetFloat("VelX", horizontalMove);
+        anim.SetFloat("VelY", verticalMove);
 
         Debug.Log(player.isGrounded);
     }
