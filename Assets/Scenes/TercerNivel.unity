@@ -10661,6 +10661,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7651005991517948098, guid: a929f10607763044a85c0aa021c4a52c, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651005991517948098, guid: a929f10607763044a85c0aa021c4a52c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7672965205087465355, guid: a929f10607763044a85c0aa021c4a52c, type: 3}
       propertyPath: m_Name
       value: Jugador Variant
