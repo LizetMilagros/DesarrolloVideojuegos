@@ -5066,6 +5066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1687361194}
+  damage: 0
+  pushForce: 4
 --- !u!114 &314075341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19809,7 +19811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150783069}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.068590455, y: -0.0010384856, z: 0.000071398375, w: 0.99764436}
+  m_LocalRotation: {x: 0.06859045, y: -0.0010384769, z: 0.000071397786, w: 0.99764436}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22444,8 +22446,6 @@ GameObject:
   - component: {fileID: 1298366320}
   - component: {fileID: 1298366322}
   - component: {fileID: 1298366321}
-  - component: {fileID: 1298366323}
-  - component: {fileID: 1298366324}
   m_Layer: 0
   m_Name: Abeja1 (3)
   m_TagString: Untagged
@@ -22482,6 +22482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1836241253}
+  damage: 10
+  pushForce: 0
 --- !u!135 &1298366322
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22497,40 +22499,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.21762991
   m_Center: {x: -0.2823701, y: 0, z: 0}
---- !u!114 &1298366323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298366319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 532271ad53b0d464ab84234df00fe8f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 749172613}
-  damage: 10
-  pushForce: 4
---- !u!114 &1298366324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298366319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f663445d0c07e9545925e437425ea188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 8
 --- !u!1001 &1302294722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24991,8 +24965,6 @@ GameObject:
   - component: {fileID: 1464064993}
   - component: {fileID: 1464064996}
   - component: {fileID: 1464064995}
-  - component: {fileID: 1464064994}
-  - component: {fileID: 1464064997}
   m_Layer: 0
   m_Name: Abeja1 (2)
   m_TagString: Untagged
@@ -25016,21 +24988,6 @@ Transform:
   - {fileID: 541570921}
   m_Father: {fileID: 157944557}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1464064994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464064992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 532271ad53b0d464ab84234df00fe8f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 749172613}
-  damage: 10
-  pushForce: 4
 --- !u!114 &1464064995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25044,6 +25001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1166370941}
+  damage: 10
+  pushForce: 0
 --- !u!135 &1464064996
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25059,25 +25018,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.21762991
   m_Center: {x: -0.2823701, y: 0, z: 0}
---- !u!114 &1464064997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464064992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f663445d0c07e9545925e437425ea188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 8
 --- !u!1001 &1465101820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27609,8 +27555,6 @@ GameObject:
   - component: {fileID: 1585534976}
   - component: {fileID: 1585534978}
   - component: {fileID: 1585534977}
-  - component: {fileID: 1585534979}
-  - component: {fileID: 1585534980}
   m_Layer: 0
   m_Name: Abeja1 (1)
   m_TagString: Untagged
@@ -27647,6 +27591,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 661276122}
+  damage: 10
+  pushForce: 0
 --- !u!135 &1585534978
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27662,40 +27608,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.21762991
   m_Center: {x: -0.2823701, y: 0, z: 0}
---- !u!114 &1585534979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585534975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 532271ad53b0d464ab84234df00fe8f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 749172613}
-  damage: 10
-  pushForce: 4
---- !u!114 &1585534980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585534975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f663445d0c07e9545925e437425ea188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 8
 --- !u!1001 &1585743537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35830,13 +35748,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 157944557}
     m_Modifications:
     - target: {fileID: 3447730109384247433, guid: e13df6dce05bbb4479d3c53127bf416b, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447730109384247433, guid: e13df6dce05bbb4479d3c53127bf416b, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1687361194}
+    - target: {fileID: 3447730109384247433, guid: e13df6dce05bbb4479d3c53127bf416b, type: 3}
+      propertyPath: pushForce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5646206089757729339, guid: e13df6dce05bbb4479d3c53127bf416b, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 749172613}
+    - target: {fileID: 5914326061271267390, guid: e13df6dce05bbb4479d3c53127bf416b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8051283159573891463, guid: e13df6dce05bbb4479d3c53127bf416b, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -35895,6 +35825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5646206089757729339, guid: e13df6dce05bbb4479d3c53127bf416b, type: 3}
+    - {fileID: 9077979243586677040, guid: e13df6dce05bbb4479d3c53127bf416b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

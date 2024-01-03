@@ -43,6 +43,32 @@ public class FollowWP : MonoBehaviour
             Debug.LogError("El objeto actual no tiene el componente WP.");
         }
     }
+        public float damage;
+                public float pushForce = 4.0f;
+
+    private void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag("Player"))
+    {
+        Rigidbody playerRigidbody = other.GetComponent<Rigidbody>();
+
+        if (playerRigidbody != null)
+        {
+            // Calcula la dirección opuesta a la colisión.
+            Vector3 pushDirection = (other.transform.position - transform.position).normalized;
+
+            // Aplica una fuerza para empujar al jugador hacia atrás.
+            playerRigidbody.AddForce(pushDirection * pushForce, ForceMode.Impulse);
+
+            PlayerStats playerStats = other.GetComponent<PlayerStats>();
+            if (playerStats != null)
+            {
+                playerStats.TakeDamage(damage);
+            }
+        }
+    }
+}
+
 }
 
 //using UnityEngine;
