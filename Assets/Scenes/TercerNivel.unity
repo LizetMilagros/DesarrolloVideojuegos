@@ -4058,7 +4058,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306871456}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03799256, y: -0.7796957, z: -0.047533497, w: 0.62319493}
+  m_LocalRotation: {x: -0.037992552, y: -0.77969563, z: -0.047533493, w: 0.6231949}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10654,6 +10654,14 @@ PrefabInstance:
     - target: {fileID: 7672965205087465355, guid: a929f10607763044a85c0aa021c4a52c, type: 3}
       propertyPath: m_Name
       value: Jugador Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651720841388159602, guid: a929f10607763044a85c0aa021c4a52c, type: 3}
+      propertyPath: gravity
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651720841388159602, guid: a929f10607763044a85c0aa021c4a52c, type: 3}
+      propertyPath: isAirborne
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23983,6 +23991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 661276122}
+  damage: 0
+  pushForce: 4
 --- !u!135 &1585534978
 SphereCollider:
   m_ObjectHideFlags: 0

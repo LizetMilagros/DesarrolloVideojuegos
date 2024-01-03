@@ -5142,11 +5142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1794604430091598946, guid: 8a075e28341d7dd49a1cebc5244bb364, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0010396042
+      value: -0.0010396128
       objectReference: {fileID: 0}
     - target: {fileID: 1794604430091598946, guid: 8a075e28341d7dd49a1cebc5244bb364, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000052496634
+      value: 0.000052497067
       objectReference: {fileID: 0}
     - target: {fileID: 1881715925188605146, guid: 8a075e28341d7dd49a1cebc5244bb364, type: 3}
       propertyPath: healthBar
@@ -12415,11 +12415,11 @@ MonoBehaviour:
   verticalMove: 0
   player: {fileID: 0}
   playerspeed: 7
-  gravity: 20
+  gravity: 15
   fallVelocity: 0
-  jumpForce: 10
+  jumpForce: 11
   mainCamera: {fileID: 317914186}
-  isAirborne: 0
+  isAirborne: 1
 --- !u!143 &749172615
 CharacterController:
   m_ObjectHideFlags: 0
@@ -19811,7 +19811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150783069}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.06859045, y: -0.0010384769, z: 0.000071397786, w: 0.99764436}
+  m_LocalRotation: {x: 0.068590455, y: -0.0010384856, z: 0.000071398375, w: 0.99764436}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27123,7 +27123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563786726}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.050432462, y: -0.0010396063, z: 0.000052496725, w: 0.99872696}
+  m_LocalRotation: {x: 0.050432462, y: -0.0010396106, z: 0.000052496947, w: 0.99872696}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
