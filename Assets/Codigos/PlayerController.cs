@@ -19,10 +19,18 @@ public class PlayerController : MonoBehaviour
     public bool isAirborne = false; // Add this line inside the PlayerController class declaration
 
     private Animator anim;
+
+    //private bool isAttacking = false;
+    private int _ataqueTrigger = 0;
+    private int _horizontalAxisHash = 0;
+    private int _verticalAxisHash = 0;
     
     void Start(){
         anim = GetComponent<Animator>();
         player = GetComponent<CharacterController>();
+        _ataqueTrigger = Animator.StringToHash("AtaqueTrigger");
+        _horizontalAxisHash = Animator.StringToHash("Horizontal");
+        _verticalAxisHash = Animator.StringToHash("Vertical");
     }
 
     // Tema Logico
@@ -46,7 +54,19 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("VelX", horizontalMove);
         anim.SetFloat("VelY", verticalMove);
 
-        Debug.Log(player.isGrounded);
+        //Debug.Log(player.isGrounded);
+
+        /*if (Input.GetKeyDown(KeyCode.X) && !isAttacking) // Cambia "Fire1" por el nombre de tu tecla 'X' en el Input Manager
+        {
+            StartCoroutine(AttackAnimation());
+        }*/
+        if (Input.GetKeyDown(KeyCode.X)){
+            anim.SetTrigger(_ataqueTrigger);
+        }
+        else{
+            anim.SetFloat(_horizontalAxisHash, horizontalMove, 1.10f, Time.deltaTime);
+            anim.SetFloat(_verticalAxisHash, verticalMove, 1.0f, Time.deltaTime);
+        }
     }
     void camDirection() {
         camForward = mainCamera.transform.forward;
@@ -87,4 +107,15 @@ public class PlayerController : MonoBehaviour
             movePlayer.y = fallVelocity;
         }
     }
+
+    /*IEnumerator AttackAnimation()
+    {
+        isAttacking = true;
+        anim.SetTrigger("punch"); // Cambia "Attack" por el nombre del parámetro de la animación de golpear
+
+        // Agrega un tiempo de espera para que la animación se reproduzca completamente
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+
+        isAttacking = false;
+    }*/
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class Enemigo : MonoBehaviour
 {
     public float damage;
+    public int hp;
+    public int dañoPuño;
+    public Animator anim;
     
     private void OnCollisionEnter(Collision collision)
     {
@@ -26,6 +29,20 @@ public class Enemigo : MonoBehaviour
                     playerStats.TakeDamage(damage);
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other){
+        if (other.gameObject.tag == "golpeImpacto"){
+            if(anim!= null){
+                anim.Play("animacionEnemigo01");
+            }
+            hp -= dañoPuño;
+        }
+
+        if(hp <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

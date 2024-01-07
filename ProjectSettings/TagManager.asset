@@ -9,6 +9,7 @@ TagManager:
   - cambioEscena
   - WayPoints
   - WayPoint
+  - golpeImpacto
   layers:
   - Default
   - TransparentFX
