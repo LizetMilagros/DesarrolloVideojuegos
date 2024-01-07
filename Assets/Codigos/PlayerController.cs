@@ -63,10 +63,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X)){
             anim.SetTrigger(_ataqueTrigger);
         }
-        else{
+        /*else{
             anim.SetFloat(_horizontalAxisHash, horizontalMove, 1.10f, Time.deltaTime);
             anim.SetFloat(_verticalAxisHash, verticalMove, 1.0f, Time.deltaTime);
-        }
+        }*/
     }
     void camDirection() {
         camForward = mainCamera.transform.forward;
