@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6190,7 +6190,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 50
+    m_MaxSpeed: 30
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -36341,7 +36341,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265032052}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca7010d74bcc2784b9ee67c24ca6ddc8, type: 3}
   m_Name: 
@@ -38776,7 +38776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1541227963}
   player: {fileID: 1265032056}
-  damage: 2
+  damage: 10
   pushForce: 5
 --- !u!195 &1299392754
 NavMeshAgent:
@@ -38787,8 +38787,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 1299392752}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.38
-  m_Speed: 3.5
+  m_Radius: 0.26
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -38797,7 +38797,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1.96
-  m_BaseOffset: -0.02
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!136 &1299392755
