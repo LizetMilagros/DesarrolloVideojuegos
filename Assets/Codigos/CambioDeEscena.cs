@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class CambioDeEscena : MonoBehaviour
 {
+    public string nivel;
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(1);
+        if(other.CompareTag("Player")){
+            SceneManager.LoadScene(nivel);
+        }
+        
     }
 }
